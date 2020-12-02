@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/greenyoung"
+    android:layout_height="match_parent"
+    tools:context=".ViewActivity">
+    <LinearLayout
+        android:id="@+id/layoutLinier"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:padding="5dp"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/searchData"
+            android:layout_width="0dp"
+            android:hint="Filter Menurut Tanggal"
+            android:textColor="@color/black"
+            android:paddingLeft="5dp"
+            android:focusable="false"
+            android:textColorHint="@color/gray"
+            android:layout_height="38dp"
+            android:layout_marginRight="6dp"
+            android:layout_weight="2"
+            android:background="@drawable/bg_dashboard"
+            />
+
+        <Button
+            android:id="@+id/btnsearch"
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:paddingLeft="14dp"
+         android:drawableStart="@drawable/ic_baseline_clear_24"
+            android:background="@color/blue"
+            android:layout_height="38dp"/>
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/layoutLinier"
+        android:id="@+id/reyview"
+        android:layout_width="match_parent"
+        android:layout_height="678dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>
